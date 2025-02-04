@@ -1,0 +1,28 @@
+<h2>Dashboard</h2>
+
+<!-- Outer Splitter: Vertical Split for Left and Right -->
+<app-splitter orientation="vertical" [firstPanelSize]="50" [secondPanelSize]="50">
+  <!-- Left Panel -->
+  <div first-panel style="border: 2px solid red; padding: 10px;width: 100%">
+    <h3>Left Panel</h3>
+    <p>This is the left panel content.</p>
+  </div>
+
+  <!-- Right Panel: Split further into Top and Bottom -->
+  <div second-panel style="border: 2px solid blue; padding: 10px; width: 100%;">
+    <!-- Inner Splitter: Horizontal Split for Top and Bottom -->
+    <app-splitter orientation="horizontal" [firstPanelSize]="50" [secondPanelSize]="50">
+      <!-- Top Panel in Right -->
+      <div first-panel style="border: 2px solid green; padding: 10px;">
+        <h3>Top Panel</h3>
+        <p>This is the top panel inside the right side.</p>
+      </div>
+
+      <!-- Bottom Panel in Right -->
+      <div second-panel style="border: 2px solid orange; padding: 10px;">
+        <h3>Bottom Panel</h3>
+        <p>This is the bottom panel inside the right side.</p>
+      </div>
+    </app-splitter>
+  </div>
+</app-splitter>

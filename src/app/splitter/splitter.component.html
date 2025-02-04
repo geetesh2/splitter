@@ -1,0 +1,24 @@
+<div class="splitter-container" [class.horizontal]="orientation === 'horizontal'">
+    <!-- First Panel (User-defined content) -->
+    <div 
+      class="panel first" 
+      #firstPanel
+      [style.width.%]="orientation === 'vertical' ? firstPanelSize : 100"
+      [style.height.%]="orientation === 'horizontal' ? firstPanelSize : 100"
+    >
+      <ng-content select="[first-panel]"></ng-content>
+    </div>
+  
+    <!-- Resizable Divider -->
+    <div class="divider" (mousedown)="onMouseDown($event)"></div>
+  
+    <!-- Second Panel (User-defined content) -->
+    <div 
+      class="panel second" 
+      [style.width.%]="orientation === 'vertical' ? secondPanelSize : 100"
+      [style.height.%]="orientation === 'horizontal' ? secondPanelSize : 100"
+    >
+      <ng-content select="[second-panel]"></ng-content>
+    </div>
+  </div>
+  
