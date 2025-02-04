@@ -1,13 +1,9 @@
 <!-- Outer Splitter: Vertical Split for Left and Right -->
 <app-splitter orientation="vertical" [firstPanelSize]="40" [secondPanelSize]="60">
   <!-- Left Panel -->
-  <div first-panel class="panel" style="background-color: green;">
-    <mat-card class="custom-card">
-      <mat-card-title>Left Panel Card</mat-card-title>
-      <mat-card-content>
-        <p>This is content inside a card in the left panel.</p>
-      </mat-card-content>
-    </mat-card>
+  <div first-panel class="panel">
+    
+    <app-content></app-content>
   </div>
 
   <!-- Right Panel -->
