@@ -1,46 +1,46 @@
 .splitter-container {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-  }
-  
-  .horizontal {
-    flex-direction: column;
-  }
-  
-  .panel {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f4f4f4;
-    transition: width 0.1s ease, height 0.1s ease;
-  }
-  
-  .first {
-    background-color: #e0e0e0;
-  }
-  
-  .second {
-    background-color: #d0d0d0;
-  }
-  
-  .divider {
-    background-color: #888;
-    transition: background-color 0.2s;
-  }
-  
-  .divider:hover {
-    background-color: #555;
-  }
-  
-  :not(.horizontal) > .divider {
-    width: 5px;
-    cursor: ew-resize;
-  }
-  
-  .horizontal > .divider {
-    height: 5px;
-    cursor: ns-resize;
-  }
-  
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.horizontal {
+  flex-direction: column;
+}
+
+.panel {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.1s ease, height 0.1s ease;
+  box-sizing: border-box; /* Ensures padding doesn't affect layout */
+  overflow: hidden; /* Prevents overflow of children */
+}
+
+
+.divider {
+  background-color: #888;
+  transition: background-color 0.2s;
+}
+
+.divider:hover {
+  background-color: #555;
+}
+
+:not(.horizontal) > .divider {
+  width: 5px;
+  cursor: ew-resize;
+}
+
+.horizontal > .divider {
+  height: 5px;
+  cursor: ns-resize;
+}
+
+.panel > * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents internal overflow */
+}

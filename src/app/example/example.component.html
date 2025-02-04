@@ -1,27 +1,36 @@
-<h2>Dashboard</h2>
-
 <!-- Outer Splitter: Vertical Split for Left and Right -->
-<app-splitter orientation="vertical" [firstPanelSize]="50" [secondPanelSize]="50">
+<app-splitter orientation="vertical" [firstPanelSize]="40" [secondPanelSize]="60">
   <!-- Left Panel -->
-  <div first-panel style="border: 2px solid red; padding: 10px;width: 100%">
-    <h3>Left Panel</h3>
-    <p>This is the left panel content.</p>
+  <div first-panel class="panel">
+    <mat-card class="custom-card">
+      <mat-card-title>Left Panel Card</mat-card-title>
+      <mat-card-content>
+        <p>This is content inside a card in the left panel.</p>
+      </mat-card-content>
+    </mat-card>
   </div>
 
-  <!-- Right Panel: Split further into Top and Bottom -->
-  <div second-panel style="border: 2px solid blue; padding: 10px; width: 100%;">
-    <!-- Inner Splitter: Horizontal Split for Top and Bottom -->
-    <app-splitter orientation="horizontal" [firstPanelSize]="50" [secondPanelSize]="50">
-      <!-- Top Panel in Right -->
-      <div first-panel style="border: 2px solid green; padding: 10px;">
-        <h3>Top Panel</h3>
-        <p>This is the top panel inside the right side.</p>
+  <!-- Right Panel -->
+  <div second-panel class="panel">
+    <app-splitter orientation="horizontal" [firstPanelSize]="10" [secondPanelSize]="90">
+      <!-- Top Panel -->
+      <div first-panel class="panel" style="background-color: red;">
+        <mat-card class="custom-card">
+          <mat-card-title>Top Panel Card</mat-card-title>
+          <mat-card-content>
+            <p>This is content inside a card in the top-right panel.</p>
+          </mat-card-content>
+        </mat-card>
       </div>
 
-      <!-- Bottom Panel in Right -->
-      <div second-panel style="border: 2px solid orange; padding: 10px;">
-        <h3>Bottom Panel</h3>
-        <p>This is the bottom panel inside the right side.</p>
+      <!-- Bottom Panel -->
+      <div second-panel class="panel" style="background-color: yellow;">
+        <mat-card class="custom-card">
+          <mat-card-title>Bottom Panel Card</mat-card-title>
+          <mat-card-content>
+            <p>This is content inside a card in the bottom-right panel.</p>
+          </mat-card-content>
+        </mat-card>
       </div>
     </app-splitter>
   </div>
