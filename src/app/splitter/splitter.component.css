@@ -9,15 +9,15 @@
 }
 
 .panel {
+  display: flex; /* Enables flex layout */
+  flex-direction: column; /* Ensures content is stacked vertically */
+  align-items: flex-start; /* Aligns children to the start horizontally */
+  justify-content: flex-start; /* Aligns children to the start vertically */
   padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: width 0.1s ease, height 0.1s ease;
   box-sizing: border-box; /* Ensures padding doesn't affect layout */
   overflow: hidden; /* Prevents overflow of children */
 }
-
 
 .divider {
   background-color: #888;
@@ -38,9 +38,10 @@
   cursor: ns-resize;
 }
 
+/* Ensure all child content within a panel is aligned properly */
 .panel > * {
-  box-sizing: border-box;
+  width: 100%; /* Ensures child content spans the full width */
+  box-sizing: border-box; /* Prevents padding from affecting size */
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Prevents internal overflow */
 }

@@ -10,23 +10,20 @@
   <div second-panel class="panel">
     <app-splitter orientation="horizontal" [firstPanelSize]="10" [secondPanelSize]="90">
       <!-- Top Panel -->
-      <div first-panel class="panel" style="background-color: red;">
-        <mat-card class="custom-card">
+      <div first-panel class="panel">
+        <!-- <mat-card class="custom-card">
           <mat-card-title>Top Panel Card</mat-card-title>
           <mat-card-content>
             <p>This is content inside a card in the top-right panel.</p>
           </mat-card-content>
-        </mat-card>
+        </mat-card> -->
+        <app-content></app-content>
+
       </div>
 
       <!-- Bottom Panel -->
-      <div second-panel class="panel" style="background-color: yellow;">
-        <mat-card class="custom-card">
-          <mat-card-title>Bottom Panel Card</mat-card-title>
-          <mat-card-content>
-            <p>This is content inside a card in the bottom-right panel.</p>
-          </mat-card-content>
-        </mat-card>
+      <div second-panel class="panel">
+        <app-content></app-content>
       </div>
     </app-splitter>
   </div>
